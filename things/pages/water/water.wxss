@@ -1,0 +1,6 @@
+/* pages/water/water.wxss */
+page{
+  /*可以使用云服务器上的地址*/
+  background-image:url('https://7069-pikefeier-pz8di-1301631614.tcb.qcloud.la/example.png?sign=033057eedea49d33311cfe9e41e37fc1&t=1585024057');
+  padding: 10px;
+}

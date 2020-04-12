@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/water/water"
+   
+  ],
+  
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "首页",
+    "enablePullDownRefresh":true,
+    "navigationBarBackgroundColor": "#ff5555",
+    "backgroundColor": "#ff5555",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#009be0",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/shouye1.png",
+        "selectedIconPath": "images/shouye.png",
+        "text": "首页"
+  
+      },
+      {
+        "pagePath": "pages/about/about",
+        "iconPath": "images/guanyu1.png",
+        "selectedIconPath": "images/guanyu.png",
+        "text": "关于"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "usingComponents": {
+    "van-button": "/ui/dist/button/index",
+    "van-image":"/ui/dist/image/index",
+    "van-field":"/ui/dist/field/index",
+    "van-sidebar":"/ui/dist/sidebar/index",
+    "van-sidebar-item": "/ui/dist/sidebar-item/index",
+    "van-tabbar": "/ui/dist/tabbar/index",
+    "van-tabbar-item": "/ui/dist/tabbar-item/index"
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

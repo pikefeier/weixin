@@ -1,0 +1,83 @@
+<!--pages/water/water.wxml-->
+
+<view class="cu-bar bg-white margin-top">
+	<view class="action">
+		<text class="cuIcon-title text-blue"></text>透明背景(文字层)
+	</view>
+</view>
+<view class="grid col-2">
+	<view class="bg-img padding-bottom-xl" style="background-image: url('https://ossweb-img.qq.com/images/lol/web201310/skin/big10007.jpg');height: 207upx;">
+		<view class="bg-shadeTop padding padding-bottom-xl">
+			上面开始
+		</view>
+	</view>
+	<view class="bg-img padding-top-xl flex align-end" style="background-image: url('https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg');height: 207upx;">
+		<view class="bg-shadeBottom padding padding-top-xl flex-sub">
+			下面开始
+		</view>
+	</view>
+</view>
+
+<!--<view class="bg-img padding-top-xl flex align-end" style="background-image: url('https://7069-pikefeier-pz8di-1301631614.tcb.qcloud.la/example.png?sign=033057eedea49d33311cfe9e41e37fc1&t=1585024057');height: 500px;">
+				<view class="bg-shadeBottom padding padding-top-xl flex-sub">
+					下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          下面开始zzz
+          <input value="sxxxxfda"></input>
+				</view>
+			</view>-->
+<!-- 提交表单按钮  -->
+
+<van-button type="primary" plain bindtap="chooseImage" style="opacity:0.6" wx:if="{{images.length < 3}}">添加图片</van-button>
+
+<van-button class="weui-btn" type="primary" bindtap="uploadFileSample">提交</van-button>
+
+<van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+	<van-sidebar-item title="标签名称" />
+</van-sidebar>
+
+<textarea value="ssssssssssss">
+<rich-text type ="text" text="ssssssssssss2"></rich-text>
+</textarea>
+<view class="question-images">
+	<block wx:for="{{images}}" wx:key="*this">
+		<view class="q-image-wrap">
+			<!-- 图片缩略图  -->
+			<image show-menu-by-longpress class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+			<!-- 移除图片的按钮  -->
+			<view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">删除</view>
+		</view>
+	</block>
+</view>

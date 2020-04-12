@@ -1,0 +1,23 @@
+<!--pages/water/water.wxml-->
+<textarea placeholder="请输入文字" bindinput="bindAndSet" data-name= "textValue" value="{{textValue}}">
+<!-- <rich-text type ="text" text="ssssssssssss2"></rich-text> -->
+</textarea>
+<van-button type="primary" plain bindtap="saveText" >写完啦</van-button>
+<van-button type="primary" plain bindtap="chooseImage" style="opacity:0.6" wx:if="{{images.length < 3}}">添加图片</van-button>
+<van-button class="weui-btn" type="primary" bindtap="uploadFileSample">提交</van-button>
+
+<!-- <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+	<van-sidebar-item title="标签名称" />
+</van-sidebar> -->
+
+
+<view class="question-images">
+	<block wx:for="{{images}}" wx:key="*this">
+		<view class="q-image-wrap">
+			<!-- 图片缩略图  -->
+			<image show-menu-by-longpress class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+			<!-- 移除图片的按钮  -->
+			<view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">删除</view>
+		</view>
+	</block>
+</view>
