@@ -7,6 +7,15 @@ Page({
     openid:'',
     userInfo:{}
   },
+  
+  //返回功能
+  onClickLeft() {
+    wx.showToast({ title: '点击返回', icon: 'none' });
+  },
+  //查看历史记录
+  onClickRight() {
+    wx.showToast({ title: '点击记录', icon: 'none' });
+  },
   //实现绑定 页面-->数据的绑定
   bindAndSet(e){
     let key = e.target.dataset.name;

@@ -1,4 +1,15 @@
 <!--pages/water/water.wxml-->
+<van-nav-bar
+  left-text="返回"
+  right-text="记录..."
+  left-arrow
+  bind:click-left="onClickLeft"
+  bind:click-right="onClickRight"
+/>
+<van-sticky offset-top="{{ 40 }}" style="height:150px;float:right;width:40px;height:30px;padding:0px;opacity:0.9">
+  <van-button type="warning" class="background_padding">背景</van-button>
+</van-sticky>
+
 <textarea placeholder="请输入文字" bindinput="bindAndSet" data-name= "textValue" value="{{textValue}}">
 <!-- <rich-text type ="text" text="ssssssssssss2"></rich-text> -->
 </textarea>
@@ -6,9 +17,9 @@
 <van-button type="primary" plain bindtap="chooseImage" style="opacity:0.6" wx:if="{{images.length < 3}}">添加图片</van-button>
 <van-button class="weui-btn" type="primary" bindtap="uploadFileSample">提交</van-button>
 
-<!-- <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+<van-sidebar bind:change="onChange">
 	<van-sidebar-item title="标签名称" />
-</van-sidebar> -->
+</van-sidebar> 
 
 
 <view class="question-images">

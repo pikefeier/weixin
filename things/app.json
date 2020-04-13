@@ -48,7 +48,9 @@
     "van-sidebar":"/ui/dist/sidebar/index",
     "van-sidebar-item": "/ui/dist/sidebar-item/index",
     "van-tabbar": "/ui/dist/tabbar/index",
-    "van-tabbar-item": "/ui/dist/tabbar-item/index"
+    "van-tabbar-item": "/ui/dist/tabbar-item/index",
+    "van-nav-bar":"/ui/dist/nav-bar/index",
+    "van-sticky":"/ui/dist/sticky/index"
   },
   "debug": true,
   "sitemapLocation": "sitemap.json"
